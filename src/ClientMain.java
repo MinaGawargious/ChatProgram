@@ -155,8 +155,6 @@ public class ClientMain implements Serializable {
             }
             System.exit(0);
         }
-
-
     }
 
     private void setSocket(){
