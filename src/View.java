@@ -66,7 +66,6 @@ public class View extends Application {
 
     public View(ClientMain client){
         this.client = client;
-//        this.outputToServer = outputToServer;
         selectedImages = new ArrayList<File>();
         try {
 //            init();
