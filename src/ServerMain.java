@@ -12,8 +12,7 @@ import java.net.*;
 import java.util.*;
 
 public class ServerMain extends Observable {
-    private List<Integer> registeredUsers; // Clients are gonna be on different computers, so we need to store
-    // registered user somewhere, so store it on Server as a list.
+    private List<Integer> registeredUsers; // Clients are gonna be on different computers, so we need to store registered user somewhere, so store it on Server as a list.
     private Integer currentClientNumber, currentGroupNumber;
     private Map<Integer, ClientConnection> clientData;
 
@@ -46,9 +45,8 @@ public class ServerMain extends Observable {
                 ClientObserver clientObserver = new ClientObserver(outputStream);
                 this.addObserver(clientObserver);
 
-                // Create input stream thread to listen to inputs from the client coming in through the socket.
+                // Create input stream thread to listen to inputs from the client coming in through the socket. NOTE: Creation of ObjectOutputStream MUST precede creation of ObjectInputStream.
                 new Thread(new ClientHandler(inputStream)).start();
-                //NOTE: Creation of ObjectOutputStream MUST precede creation of ObjectInputStream.
 
                 // Give the new client his custom ID.
                 this.setChanged();
