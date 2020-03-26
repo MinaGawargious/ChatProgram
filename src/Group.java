@@ -6,8 +6,7 @@ public class Group implements Serializable {
     private Integer groupID;
     public List<Message> messages;
     private List<Integer> clientIDs; // Each group needs to have its own client list in order for clients to know to
-    // add/remove this group from their list. Group A has client list B and each client in B has group A in their
-    // group list.
+    // add/remove this group from their list. Group A has client list B and each client in B has group A in their group list.
     private String groupName;
 
     public Group(List<Integer> clientIDs, String groupName){
