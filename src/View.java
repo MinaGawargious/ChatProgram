@@ -225,7 +225,6 @@ public class View extends Application {
         ImageView uploadImageView = new ImageView(uploadImage);
         scale = scale(uploadImage, smallButtonWidth, smallItemHeight);
         uploadImageView.setFitWidth(scale * uploadImage.getWidth());
-        uploadImageView.setFitWidth(scale * uploadImage.getWidth());
         uploadImageView.setFitHeight(scale * uploadImage.getHeight());
         // Upload button:
         uploadButton = new Button(null, uploadImageView);
