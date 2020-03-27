@@ -134,8 +134,7 @@ public class ServerMain extends Observable {
                     setChanged();
                     if(dataFromClient instanceof Integer){
                         Integer clientID = (Integer) dataFromClient;
-                        // This client sent its client id to be added to or removed from registered users. So, send the
-                        // updated list to all observers to push to ALL clients.
+                        // This client sent its client id to be added to or removed from registered users. So, send the updated list to all observers to push to ALL clients.
                         if(registeredUsers.contains(clientID)){
                             removeClient(clientID);
                             clientData.remove(clientID);
